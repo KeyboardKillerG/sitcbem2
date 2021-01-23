@@ -30,7 +30,7 @@
       @if((Auth::user()->hasRole('admin')) || (Auth::user()->hasRole('operador')))
       <td>
         @if(Auth::user()->hasRole('admin'))
-          <form action="{{ route('usuario.eliminar', $usuario->id) }}" class="d-inline" method="POST">
+          <form action="{{route('usuario.eliminar', $usuario->id) }}" class="d-inline" method="POST">
           @method('DELETE')
           @csrf
           <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
