@@ -6,8 +6,6 @@
       <th scope="col">id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
-      <th scope="col">ApellidoP</th>
-      <th scope="col">ApellidoM</th>
       <th scope="col">Tipo de usuario</th>
       @if((Auth::user()->hasRole('admin')) || (Auth::user()->hasRole('operador')))
         <th scope="col">Acciones</th>
@@ -21,11 +19,19 @@
       <td>{{ $usuario->name}}</td>
       <td>{{ $usuario->email}}</td>
       <td>
-{{--         @foreach($centrosTrabajo as $centroTrabajo)
-          @if($centroTrabajo->id == $afiliado->CentroTrabajoID)
-            {{$centroTrabajo->Nombre}}
+        @foreach($rol_users as $rol_user)
+          @if($usuario->id == $rol_user->user_id)
+            {{-- {{$rol_user->role_id}} --}}
+            @foreach($roles as $rol)
+              @if($rol_user->role_id == $rol->id)
+                {{$rol->name}}
+              @endif
+            @endforeach 
           @endif
-        @endforeach --}}
+        @endforeach
+
+       
+
       </td>
       @if((Auth::user()->hasRole('admin')) || (Auth::user()->hasRole('operador')))
       <td>
