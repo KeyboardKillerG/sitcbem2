@@ -36,7 +36,7 @@
           <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
           </form>
         @endif
-          <a href="{{route('usuario.editar', $afiliado->id)}}" class="btn btn-info btn-sm">Editar</a>
+          <a href="{{route('usuario.editar', $usuario->id)}}" class="btn btn-info btn-sm">Editar</a>
       </td>
       @endif
     </tr>
