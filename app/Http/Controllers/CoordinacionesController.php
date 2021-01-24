@@ -22,7 +22,7 @@ class CoordinacionesController extends Controller
     $coordinacion->Telefono = $request->Telefono;
 
     $coordinacion->save();
-    return back()->with('mensaje', 'Coordinacion agregada');
+    return redirect('/verCoordinaciones');
   }
 
   public function mostrarCoordinaciones(){
