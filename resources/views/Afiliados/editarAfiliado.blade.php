@@ -14,7 +14,7 @@
     <input
       type="text"
       required="text"
-      name="Nombre0"
+      name="Nombre"
       placeholder="Nombre"
       class="form-control mb-2 w-50"
       value="{{ $afiliado->Nombre }}"
