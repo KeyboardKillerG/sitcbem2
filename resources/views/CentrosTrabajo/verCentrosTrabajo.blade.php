@@ -1,6 +1,14 @@
 @extends('bootstrap')
 @section('master')
 <table class="table">
+<div Style="color: #3c1b66;
+  font-weight: normal;
+  font-size: 35px;
+  font-family: Arial;
+  text-transform: uppercase;">
+<h2>CENTROS DE TRABAJO</h2>
+
+</div>
   <thead>
     <tr>
       <th scope="col">id</th>

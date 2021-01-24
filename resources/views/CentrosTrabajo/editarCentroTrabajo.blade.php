@@ -1,9 +1,10 @@
 @extends('bootstrap')
 @section('master')
-<form method="POST" action="{{ route('centroTrabajo.update', $centro->id) }}" class="text-light">
-  @method('PUT')
-  @csrf
 
+<h3 style="text-transform: uppercase;">EDITAR CENTRO DE TRABAJO</h3>
+<form method="POST" action="{{ route('centroTrabajo.update', $centro->id) }}" class="text-light">
+  
+  @csrf
   <input
     type="text"
     required="text"
@@ -23,7 +24,7 @@
   />
 
   <div class="form-group mb-2">
-     <label for="coordinacion">Coordinaciones</label>
+     
      <select class="form-control" id="coordinacion" name="CoordinacionID">
       <option>{{$coordi->Nombre}}</option>
         @foreach ($coordinaciones as $coordinacion)

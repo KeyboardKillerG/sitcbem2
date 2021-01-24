@@ -1,7 +1,9 @@
 @extends('bootstrap')
 @section('master')
-<form method="POST" action="{{ route('afiliado.insertar') }}" class="text-light">
+<h3>AGREGAR NUEVO AFILIADO</h3>
+<form action="{{ route('afiliado.insertar') }}" class="text-light" method="POST">
   @csrf
+  
   <input
     type="text"
     required="text"
@@ -9,6 +11,7 @@
     placeholder="Nombre"
     class="form-control mb-2"
   />
+  
   <input
     type="text"
     required="text"
@@ -30,9 +33,7 @@
     placeholder="Fecha Nacimiento"
     class="form-control mb-2"
   />
-
   <div class="form-group mb-2">
-   <label for="genero">Genero</label>
    <select class="form-control" id="genero" name="Genero">
      <option>Hombre</option>
      <option>Mujer</option>
@@ -41,7 +42,7 @@
  </div>
 
  <div class="form-group mb-2">
-  <label for="edocivil">Estado Civil</label>
+  <label for="edocivil">Estado Civil:</label>
   <select class="form-control" id="edocivil" name="EstadoCivil">
     <option>Soltero</option>
     <option>Casado</option>
