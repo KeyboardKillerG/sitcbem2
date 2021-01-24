@@ -46,11 +46,11 @@
       class="form-control mb-2 w-25"
       value="{{ $afiliado->FechaNacimiento }}"
     />
-<<<<<<< HEAD
+
     <label for='genero'>Género:</label>
-=======
+
     <label for='género'>Género:</label>
->>>>>>> 5fc4d3b823fbc46daf1ebb43b9abc19d81f52882
+
     <select class="form-control mb-2 w-25" name="Genero" id='genero'>
       <option>Hombre</option>
       <option>Mujer</option>
