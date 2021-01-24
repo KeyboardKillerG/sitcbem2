@@ -1,5 +1,11 @@
+
 @extends('bootstrap')
+@if(Session::has('mensaje')){{
+Session::get('mensaje')
+}}
+@endif
 @section('master')
+
 <table class="table">
   <thead>
     <tr>

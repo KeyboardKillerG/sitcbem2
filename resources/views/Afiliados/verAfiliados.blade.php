@@ -1,3 +1,7 @@
+@if(Session::has('mensaje')){{
+Session::get('Mensaje')
+}}
+@endif
 @extends('bootstrap')
 @section('master')
 <table class="table">

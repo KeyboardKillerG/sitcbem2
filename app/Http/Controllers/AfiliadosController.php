@@ -51,7 +51,7 @@ class AfiliadosController extends Controller
 
 
         $nuevoAfiliado->save();
-        return redirect('/verAfiliados');
+        return redirect('/verAfiliados')->with('mensaje','Afiliado agregado con éxito');
       }
 
       public function mostrarAfiliados(Request $request){

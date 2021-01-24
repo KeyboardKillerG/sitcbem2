@@ -29,7 +29,7 @@ class CentrosTrabajoController extends Controller
 
 
       $centroTrabajo->save();
-      return redirect('/verCentrosTrabajo');
+      return redirect('/verCentrosTrabajo')->with('mensaje','Centro de trabajo agregado con éxito');
     }
 
     public function mostrarCentrosTrabajo(){
