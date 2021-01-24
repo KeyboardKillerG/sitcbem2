@@ -20,7 +20,7 @@
     type="text"
     required="text"
     name="ApellidoM"
-    placeholder="Apellido Paterno"
+    placeholder="Apellido Materno"
     class="form-control mb-2"
   />
   <input
