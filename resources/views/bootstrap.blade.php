@@ -20,19 +20,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-
+      @if((Auth::user()->hasRole('admin'))||(Auth::user()->hasRole('operador')))
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Usuarios
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ route('usuario.mostrar') }}">Ver Usuarios</a>
-            @if((Auth::user()->hasRole('admin'))||(Auth::user()->hasRole('operador')))
+           
               <a class="dropdown-item" href="{{ route('usuario.mostrar') }}">Agregar Usuario</a>
-            @endif
+            
           </div>
         </li>
-
+        @endif
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Afiliados
