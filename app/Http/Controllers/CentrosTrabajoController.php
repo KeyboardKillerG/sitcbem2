@@ -61,7 +61,7 @@ class CentrosTrabajoController extends Controller
        $centroTrabajo->CoordinacionID = $request->CoordinacionID;
 
        $centroTrabajo->save();
-       return redirect('/verCentrosTrabajo');
+       return redirect('/verCentrosTrabajo')->with('mensaje','Centro de trabajo editado con éxito');
      }
 
 }
