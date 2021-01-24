@@ -14,7 +14,7 @@
     type="text"
     required="text"
     name="Telefono"
-    placeholder="Telefono"
+    placeholder="Teléfono"
     class="form-control mb-2"
   />
 
