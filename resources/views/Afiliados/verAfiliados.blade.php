@@ -31,14 +31,15 @@
       </td>
       @if((Auth::user()->hasRole('admin')) || (Auth::user()->hasRole('operador')))
       <td>
-        @if(Auth::user()->hasRole('admin'))
+       
+          <a href="{{route('afiliado.editar', $afiliado->id)}}" class="btn btn-info btn-sm">Editar</a>
+          @if(Auth::user()->hasRole('admin'))
           <form action="{{ route('afiliado.eliminar', $afiliado->id) }}" class="d-inline" method="POST">
           @method('DELETE')
           @csrf
           <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
           </form>
         @endif
-          <a href="{{route('afiliado.editar', $afiliado->id)}}" class="btn btn-info btn-sm">Editar</a>
       </td>
       @endif
     </tr>
