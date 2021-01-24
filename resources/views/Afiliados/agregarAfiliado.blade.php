@@ -42,8 +42,7 @@
  </div>
 
  <div class="form-group mb-2">
-  <label for="edocivil">Estado Civil:</label>
-  <select class="form-control" id="edocivil" name="EstadoCivil">
+  <select class="form-control" id="edocivil" name="EstadoCivil" placeholder="Estado Civil">
     <option>Soltero</option>
     <option>Casado</option>
   </select>
@@ -53,7 +52,7 @@
     type="number"
     required="number"
     name="CodigoPostal"
-    placeholder="202020"
+    placeholder="Codigo Postal"
     class="form-control mb-2"
     />
 
@@ -141,7 +140,6 @@
       placeholder="RFC"
       class="form-control mb-2"
     />
-
     <div class="form-group mb-2">
      <label for="estado">Estado</label>
      <select class="form-control" id="estado" name="Estado">
