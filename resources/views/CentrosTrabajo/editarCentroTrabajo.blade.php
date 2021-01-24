@@ -17,7 +17,7 @@
     type="text"
     required="text"
     name="Telefono"
-    placeholder="Telefono"
+    placeholder="Teléfono"
     class="form-control mb-2"
     value = "{{$centro->Telefono}}"
   />
@@ -28,7 +28,7 @@
       <option>{{$coordi->Nombre}}</option>
         @foreach ($coordinaciones as $coordinacion)
           @if ($coordinacion->id!=$coordi->id)
-            <option value='{{$coordinacion->id}}'>{{$coordinacion->Nombre}}</option>
+            <option>{{$coordinacion->Nombre}}</option>
           @endif
        @endforeach
   </select>

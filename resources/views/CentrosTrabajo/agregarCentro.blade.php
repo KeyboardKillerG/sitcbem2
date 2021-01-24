@@ -2,6 +2,8 @@
 @section('master')
 <form method="POST" action="{{ route('centroTrabajo.insertar') }}" class="text-light">
   @csrf
+
+  <label for='Nom'>Nombre :</label>
   <input
     type="text"
     required="text"
@@ -10,11 +12,12 @@
     class="form-control mb-2"
 />
 
+<label for='tel'> Teléfono:</label>
   <input
     type="text"
     required="number"
     name="Telefono"
-    placeholder="Telefono"
+    placeholder="Teléfono"
     class="form-control mb-2"
   />
 

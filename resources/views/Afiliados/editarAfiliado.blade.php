@@ -43,7 +43,7 @@
       class="form-control mb-2 w-25"
       value="{{ $afiliado->FechaNacimiento }}"
     />
-    <label for='genero'>Genero:</label>
+    <label for='género'>Género:</label>
     <select class="form-control mb-2 w-25" name="Genero" id='genero'>
       <option>Hombre</option>
       <option>Mujer</option>
@@ -56,13 +56,13 @@
       <option>Soltero</option>
     </select>
 
-    <label for='cp'>Codigo Postal:</label>
+    <label for='cp'>Código Postal:</label>
      <input
      id="cp"
-      type="number"
+      type="text"
       required="number"
       name="CodigoPostal"
-      placeholder="202020"
+      placeholder="Código postal"
       class="form-control mb-2 w-25"
       value="{{ $afiliado->CodigoPostal }}"
       />
@@ -89,7 +89,7 @@
         type="text"
         required="text"
         name="NumeroExterior"
-        placeholder="Numero Exterior"
+        placeholder="Número Exterior"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->NumeroExterior }}"
       />
@@ -97,7 +97,7 @@
         type="text"
         required="text"
         name="NumeroInterior"
-        placeholder="Numero Interior"
+        placeholder="Número Interior"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->NumeroInterior }}"
       />
@@ -105,7 +105,7 @@
         type="text"
         required="text"
         name="Telefono"
-        placeholder="Telefono"
+        placeholder="Télefono"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->Telefono }}"
       />
@@ -131,7 +131,7 @@
             @foreach ($centrosTrabajo as $centroTrabajo)
              <option value='{{$centroTrabajo->id}}'>{{$centroTrabajo->Nombre}}</option>
             @endforeach
-         </select>
+         </select> 
 
 
       <input
@@ -163,9 +163,7 @@
        <label for="estado">Estado</label>
        <select class="form-control" id="estado" name="Estado">
          @foreach ($estados as $estado)
-         @if($estado ->id!=$edo->id)
-         <option value='{{$estado->id}}'>{{$estado->Estado}}</option>
-         @endif
+         <option >{{$estado->Estado}}</option>
          @endforeach
        </select>
      </div>
