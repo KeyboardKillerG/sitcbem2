@@ -57,6 +57,7 @@ class AfiliadosController extends Controller
       public function mostrarAfiliados(Request $request){
          $afiliados = Afiliado::all();
          $centrosTrabajo = CentroTrabajo::all();
+        
 
          return view('Afiliados.verAfiliados', compact('afiliados','centrosTrabajo'));
        }
@@ -99,7 +100,7 @@ class AfiliadosController extends Controller
         $Afiliado->CentroTrabajoID = $request->CentroTrabajoID;
         $Afiliado->TipoPlaza = $request->TipoPlaza;
         $Afiliado->FechaIngreso = $request->FechaIngreso;
-        $Afiliado->EstadoID = 1;
+        $Afiliado->EstadoID = $request->EstadoID;
 
 
         $Afiliado->save();

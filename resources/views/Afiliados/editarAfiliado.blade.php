@@ -175,9 +175,9 @@
 
       <div class="form-group mb-2">
        <label for="estado">Estado:</label>
-       <select class="form-control" id="estado" name="Estado">
+       <select class="form-control" id="estado" name="EstadoID">
          @foreach ($estados as $estado)
-         <option >{{$estado->Estado}}</option>
+         <option value='{{$afiliado->id}}'>{{$estado->Estado}}</option>
          @endforeach
        </select>
      </div>
