@@ -14,7 +14,7 @@
     <input
       type="text"
       required="text"
-      name="Nombre0"
+      name="Nombre"
       placeholder="Nombre"
       class="form-control mb-2 w-50"
       value="{{ $afiliado->Nombre }}"
@@ -163,10 +163,16 @@
        <label for="estado">Estado</label>
        <select class="form-control" id="estado" name="Estado">
          @foreach ($estados as $estado)
-         <option>{{$estado->Estado}}</option>
+         @if($estado ->id!=$edo->id)
+         <option value='{{$estado->id}}'>{{$estado->Estado}}</option>
+         @endif
          @endforeach
        </select>
      </div>
+
+
+   
+
      
     <button class="btn btn-info btn-block" type="submit">Editar</button>
   </form>

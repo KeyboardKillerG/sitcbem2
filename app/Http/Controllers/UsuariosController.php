@@ -15,6 +15,13 @@ class UsuariosController extends Controller
       $this->middleware('auth');
   }
 
+  public function eliminarUsuarios($id){
+    $usuarioEliminar = User::findOrFail($id)->DELETE();
+
+    return back()->with('mensaje', 'usuario Eliminado');
+  }
+  
+
   public function mostrarUsuarios(Request $request){
     $usuarios = User::all();
     $rol_users= Role_user::all('id','user_id', 'role_id');;

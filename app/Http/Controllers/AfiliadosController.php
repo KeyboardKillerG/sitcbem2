@@ -73,12 +73,12 @@ class AfiliadosController extends Controller
         $afiliado = Afiliado::findOrFail($id);
         $centrosTrabajo = CentroTrabajo::all();
         $estados = Estado::all();
-
-        return view('Afiliados.editarAfiliado', compact('afiliado','centrosTrabajo','estados'));
+        $edo = Estado::findOrFail($afiliado->EstadoID);
+        return view('Afiliados.editarAfiliado', compact('afiliado','edo','centrosTrabajo','estados'));
       }
 
       public function updateAfiliado(Request $request , $id){
-        $request->user()->authorizeRoles(['operador', 'admin']);
+      
         $Afiliado = Afiliado::findOrFail($id);
         $Afiliado->Nombre = $request->Nombre;
         $Afiliado->ApellidoP = $request->ApellidoP;

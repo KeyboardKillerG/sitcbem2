@@ -28,7 +28,7 @@
       <option>{{$coordi->Nombre}}</option>
         @foreach ($coordinaciones as $coordinacion)
           @if ($coordinacion->id!=$coordi->id)
-            <option>{{$coordinacion->Nombre}}</option>
+            <option value='{{$coordinacion->id}}'>{{$coordinacion->Nombre}}</option>
           @endif
        @endforeach
   </select>
