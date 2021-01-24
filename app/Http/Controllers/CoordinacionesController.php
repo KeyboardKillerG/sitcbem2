@@ -50,7 +50,7 @@ class CoordinacionesController extends Controller
      $coordinacion->Telefono = $request->Telefono;
 
      $coordinacion->save();
-     return redirect('/verCoordinaciones');
+     return redirect('/verCoordinaciones')->with('mensaje','Coordinación editada con éxito');
    }
 
 }

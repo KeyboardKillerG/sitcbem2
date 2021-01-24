@@ -103,7 +103,7 @@ class AfiliadosController extends Controller
 
 
         $Afiliado->save();
-        return redirect('/verAfiliados');
+        return redirect('/verAfiliados')->with('mensaje','Afiliado editado con éxito');
          
 
 
