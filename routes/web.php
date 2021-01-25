@@ -73,6 +73,12 @@ Route::put('/editarCoordinacion/{id}', [CoordinacionesController::class,'updateC
 //Usuarios
 
 Route::get('/verUsuario', [UsuariosController::class,'mostrarUsuarios'])->name('usuario.mostrar');
+//Agregar usuario
+Route::get('/agregarUsuario',[UsuariosController::class,'agregarUsuario'])->name('usuario.agregar');
+
+
+//Insertar Usuario
+Route::post('/insertarUsuario',[UsuariosController::class,'insertarUsuario'])->name('usuario.insertar');
 
 Route::delete('/eliminarUsuario/{id}', [UsuariosController::class,'eliminarUsuarios'])->name('usuario.eliminar');
 

@@ -47,7 +47,7 @@ class AfiliadosController extends Controller
         $nuevoAfiliado->CentroTrabajoID = $request->CentroTrabajoID;
         $nuevoAfiliado->TipoPlaza = $request->TipoPlaza;
         $nuevoAfiliado->FechaIngreso = $request->FechaIngreso;
-        $nuevoAfiliado->EstadoID = 1;
+        $nuevoAfiliado->EstadoID = $request->EstadoID;
 
 
         $nuevoAfiliado->save();

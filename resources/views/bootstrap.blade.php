@@ -28,7 +28,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{ route('usuario.mostrar') }}">Ver Usuarios</a>
            
-              <a class="dropdown-item" href="{{ route('usuario.mostrar') }}">Agregar Usuario</a>
+              <a class="dropdown-item" href="{{ route('usuario.agregar') }}">Agregar Usuario</a>
             
           </div>
         </li>
