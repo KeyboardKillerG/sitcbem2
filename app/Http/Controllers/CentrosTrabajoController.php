@@ -55,13 +55,14 @@ class CentrosTrabajoController extends Controller
     }
 
      public function updateCentroTrabajo(Request $request , $id){
-       $centroTrabajo = CentroTrabajo::findOrFail($id);
+      $centroTrabajo = CentroTrabajo::findOrFail($id);
        $centroTrabajo->Nombre = $request->Nombre;
        $centroTrabajo->Telefono = $request->Telefono;
        $centroTrabajo->CoordinacionID = $request->CoordinacionID;
 
        $centroTrabajo->save();
        return redirect('/verCentrosTrabajo')->with('mensaje','Centro de trabajo editado con éxito');
+     //  return $request->all();
      }
 
 }
