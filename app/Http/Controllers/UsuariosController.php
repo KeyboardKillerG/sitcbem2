@@ -38,24 +38,28 @@ class UsuariosController extends Controller
 ]);
 
 $NuevoUser->roles()->attach(Role::where('name', $request['role'])->first());
-
+//$nuevoUsuario->save();
+return redirect('/verUsuario')->with('mensaje','Usuario agregado con éxito');
 //return $request->all();
   }
   else {
     return redirect('/agregarUsuario')->with('mensaje','Contraseña no iguales');
   }
-
-
-
-    $nuevoUsuario->save();
-    return redirect('/verUsuario')->with('mensaje','Usuario agregado con éxito');
- //  return $request->all();
+ 
   }
 
   public function eliminarUsuarios($id){
     $usuarioEliminar = User::findOrFail($id)->DELETE();
 
     return back()->with('mensaje', 'usuario Eliminado');
+  }
+
+  public function editarUsuarios(Request $request,$id){
+    $usuario = User::findOrFail($id);
+    $rol_users= Role_user::all('id','user_id', 'role_id');;
+    $roles= Role:: all('id','name');
+
+    return view('Usuarios.editarUsuario', compact('usuario','rol_users','roles'));
   }
   
 
@@ -66,5 +70,20 @@ $NuevoUser->roles()->attach(Role::where('name', $request['role'])->first());
 
     return view('Usuarios.verUsuarios', compact('usuarios','rol_users','roles'));
   }
+//Aun no funciona falta el rol
+  public function updateUsuarios(Request $request,$id){
+    $UpdateUsuario = User::findOrFail($id);
+    $UpdateUsuario -> update([
+      'name' => $request['name'],
+    'email' => $request['email'],
+    'password' => Hash::make($request['password']),
+    ]);
+
+
+    $UpdateUsuario = Role::where()->roles('name','=',$request['role'])->first();
+
+
+  }
+
 }
 

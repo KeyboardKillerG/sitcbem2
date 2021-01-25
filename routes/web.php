@@ -82,4 +82,7 @@ Route::post('/insertarUsuario',[UsuariosController::class,'insertarUsuario'])->n
 
 Route::delete('/eliminarUsuario/{id}', [UsuariosController::class,'eliminarUsuarios'])->name('usuario.eliminar');
 
+//editar Usuario
 Route::get('/editarUsuario/{id}', [UsuariosController::class,'editarUsuarios'])->name('usuario.editar');
+
+Route::put('/editarUsuario/{id}', [UsuariosController::class,'updateUsuarios'])->name('usuario.update');
