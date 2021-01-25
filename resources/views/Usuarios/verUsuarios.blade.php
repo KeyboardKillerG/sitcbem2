@@ -55,5 +55,15 @@
     </tr>
     @endforeach
   </tbody>
+
+
+<div Style="color:#000000;">
+@if(Session::has('mensaje')){{
+Session::get('mensaje')
+}}
+@endif
+</div>
+
+
 </table>
 @endsection

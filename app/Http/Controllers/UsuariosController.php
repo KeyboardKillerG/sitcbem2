@@ -78,9 +78,16 @@ return redirect('/verUsuario')->with('mensaje','Usuario agregado con éxito');
     'email' => $request['email'],
     'password' => Hash::make($request['password']),
     ]);
+    $UpdateUsuario->roles()->detach();
+    
+$UpdateUsuario->roles()->attach(Role::where('name', $request['role'])->first());
+return redirect('/verUsuario')->with('mensaje','Usuario editado con éxito');
+         
+//$nuevoUsuario->save();
 
+    
 
-    $UpdateUsuario = Role::where()->roles('name','=',$request['role'])->first();
+    
 
 
   }
