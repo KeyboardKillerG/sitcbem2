@@ -26,8 +26,8 @@ class AfiliadosController extends Controller
       }
 
       public function insertarAfiliado(Request $request){
-        $request->user()->authorizeRoles(['operador', 'admin']);
-        $nuevoAfiliado = new Afiliado;
+       $request->user()->authorizeRoles(['operador', 'admin']);
+      $nuevoAfiliado = new Afiliado;
         $nuevoAfiliado->Nombre = $request->Nombre;
         $nuevoAfiliado->ApellidoP = $request->ApellidoP;
         $nuevoAfiliado->ApellidoM = $request->ApellidoM;
@@ -47,11 +47,12 @@ class AfiliadosController extends Controller
         $nuevoAfiliado->CentroTrabajoID = $request->CentroTrabajoID;
         $nuevoAfiliado->TipoPlaza = $request->TipoPlaza;
         $nuevoAfiliado->FechaIngreso = $request->FechaIngreso;
-        $nuevoAfiliado->EstadoID = $request->EstadoID;
+        $nuevoAfiliado->EstadoID = $request->Estado;  
 
 
         $nuevoAfiliado->save();
-        return redirect('/verAfiliados')->with('mensaje','Afiliado agregado con éxito');
+        return redirect('/verAfiliados')->with('mensaje','Afiliado agregado con éxito'); 
+     //  return $request->all();
       }
 
       public function mostrarAfiliados(Request $request){

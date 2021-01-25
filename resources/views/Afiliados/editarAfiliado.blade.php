@@ -15,7 +15,6 @@
       type="text"
       required="text"
       name="Nombre"
-      placeholder="Nombre"
       class="form-control mb-2 w-50"
       value="{{ $afiliado->Nombre }}"
     />
@@ -24,7 +23,6 @@
       type="text"
       required="text"
       name="ApellidoP"
-      placeholder="Apellido Paterno"
       class="form-control mb-2 w-50"
       value="{{ $afiliado->ApellidoP }}"
     />
@@ -33,7 +31,6 @@
       type="text"
       required="text"
       name="ApellidoM"
-      placeholder="Apellido Materno"
       class="form-control mb-2 w-50"
       value="{{ $afiliado->ApellidoM }}"
     />
@@ -42,7 +39,6 @@
       type="date"
       required="date"
       name="FechaNacimiento"
-      placeholder="Fecha Nacimiento"
       class="form-control mb-2 w-25"
       value="{{ $afiliado->FechaNacimiento }}"
     />
@@ -69,7 +65,6 @@
       type="text"
       required="number"
       name="CodigoPostal"
-      placeholder="Código postal"
       class="form-control mb-2 w-25"
       value="{{ $afiliado->CodigoPostal }}"
       />
@@ -78,7 +73,6 @@
         type="text"
         required="text"
         name="Colonia"
-        placeholder="Colonia"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->Colonia }}"
       />
@@ -87,7 +81,6 @@
         type="text"
         required="text"
         name="Calle"
-        placeholder="Calle"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->Calle }}"
       />
@@ -96,7 +89,6 @@
         type="text"
         required="text"
         name="NumeroExterior"
-        placeholder="Número Exterior"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->NumeroExterior }}"
       />
@@ -105,7 +97,6 @@
         type="text"
         required="text"
         name="NumeroInterior"
-        placeholder="Número Interior"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->NumeroInterior }}"
       />
@@ -114,7 +105,6 @@
         type="text"
         required="text"
         name="Telefono"
-        placeholder="Télefono"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->Telefono }}"
       />
@@ -123,7 +113,6 @@
         type="email"
         required="email"
         name="Email"
-        placeholder="Email"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->Email }}"
         required
@@ -133,7 +122,6 @@
         type="text"
         required="text"
         name="CURP"
-        placeholder="CURP"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->CURP }}"
       />
@@ -150,7 +138,6 @@
         type="text"
         required="text"
         name="TipoPlaza"
-        placeholder="Tipo de plaza"
         class="form-control mb-2  w-25"
         value="{{ $afiliado->TipoPlaza }}"
       />
@@ -159,7 +146,6 @@
         type="date"
         required="date"
         name="FechaIngreso"
-        placeholder="Fecha de Ingreso"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->FechaIngreso }}"
       />
@@ -168,7 +154,6 @@
         type="text"
         required="text"
         name="RFC"
-        placeholder="RFC"
         class="form-control mb-2 w-25"
         value="{{ $afiliado->RFC }}"
       />

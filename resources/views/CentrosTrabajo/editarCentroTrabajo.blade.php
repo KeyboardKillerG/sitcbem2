@@ -5,6 +5,7 @@
 <form method="POST" action="{{ route('centroTrabajo.update', $centro->id) }}" class="text-light">
   
   @csrf
+  <label style="color:#000000;" for='Nom'>Nombre :</label>
   <input
     type="text"
     required="text"
@@ -13,7 +14,7 @@
     class="form-control mb-2"
     value = "{{$centro->Nombre}}"
   />
-
+  <label style="color:#000000;" for='Nom'>Teléfono :</label>
   <input
     type="text"
     required="text"
@@ -24,7 +25,7 @@
   />
 
   <div class="form-group mb-2">
-     
+     <label for="coordinador" style="color:#000000;">Coordinador:</label>
      <select class="form-control" id="coordinacion" name="CoordinacionID">
       <option>{{$coordi->Nombre}}</option>
         @foreach ($coordinaciones as $coordinacion)

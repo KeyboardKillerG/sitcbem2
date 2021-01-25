@@ -3,27 +3,25 @@
 <form method="POST" action="{{ route('centroTrabajo.insertar') }}" class="text-light">
   @csrf
 
-  <label for='Nom'>Nombre :</label>
+  <label style="color:#000000;" for='Nom'>Nombre :</label>
   <input
     type="text"
     required="text"
     name="Nombre"
-    placeholder="Nombre"
     class="form-control mb-2"
 />
 
-<label for='tel'> Teléfono:</label>
+<label  style="color:#000000;" for='tel'> Teléfono:</label>
   <input
     type="text"
     required="number"
     name="Telefono"
-    placeholder="Teléfono"
     class="form-control mb-2"
   />
 
 
   <div class="form-group mb-2">
-     <label for="coordinacion">Coordinaciones</label>
+     <label style="color:#000000;" for="coordinacion">Coordinaciones</label>
      <select class="form-control" id="coordinacion" name="CoordinacionID">
          @foreach ($coordinaciones as $coordinacion)
           <option value='{{$coordinacion->id}}' >{{$coordinacion->Nombre}}</option>

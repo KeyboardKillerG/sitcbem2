@@ -3,36 +3,35 @@
 <h3>AGREGAR NUEVO AFILIADO</h3>
 <form action="{{ route('afiliado.insertar') }}" class="text-light" method="POST">
   @csrf
-  
+  <label for="" style="color:#000000;">Nombre:</label>
   <input
     type="text"
     required="text"
     name="Nombre"
-    placeholder="Nombre"
     class="form-control mb-2"
   />
-  
+  <label for="" style="color:#000000;">Apellido Paterno:</label>
   <input
     type="text"
     required="text"
     name="ApellidoP"
-    placeholder="Apellido Paterno"
     class="form-control mb-2"
   />
+  <label for="" style="color:#000000;">Apellido Materno:</label>
   <input
     type="text"
     required="text"
     name="ApellidoM"
-    placeholder="Apellido Materno"
     class="form-control mb-2"
   />
+  <label for="" style="color:#000000;">Fecha de Nacimiento</label>
   <input
     type="date"
     required="date"
     name="FechaNacimiento"
-    placeholder="Fecha Nacimiento"
     class="form-control mb-2"
   />
+  <label for="" style="color:#000000;">Genero:</label>
   <div class="form-group mb-2">
    <select class="form-control" id="genero" name="Genero">
      <option>Hombre</option>
@@ -40,111 +39,104 @@
      <option>Otro</option>
    </select>
  </div>
-
+ <label for="" style="color:#000000;">Estado Civil:</label>
  <div class="form-group mb-2">
   <select class="form-control" id="edocivil" name="EstadoCivil" placeholder="Estado Civil">
     <option>Soltero</option>
     <option>Casado</option>
   </select>
   </div>
-
+  <label for="" style="color:#000000;">Código Postal:</label>
    <input
     type="number"
     required="number"
     name="CodigoPostal"
-    placeholder="Codigo Postal"
     class="form-control mb-2"
     />
-
+    <label for="" style="color:#000000;">Colonia:</label>
     <input
       type="text"
       required="text"
       name="Colonia"
-      placeholder="Colonia"
       class="form-control mb-2"
     />
-
+    <label for="" style="color:#000000;">Calle:</label>
     <input
       type="text"
       required="text"
       name="Calle"
-      placeholder="Calle"
       class="form-control mb-2"
     />
-
+    <label for="" style="color:#000000;">No. exterior:</label>
     <input
       type="text"
       required="text"
       name="NumeroExterior"
-      placeholder="Numero Exterior"
       class="form-control mb-2"
     />
+    <label for="" style="color:#000000;">No. interior:</label>
     <input
       type="text"
       required="text"
       name="NumeroInterior"
-      placeholder="Numero Interior"
       class="form-control mb-2"
     />
+    <label for="" style="color:#000000;">Teléfono:</label>
     <input
       type="text"
       required="text"
       name="Telefono"
-      placeholder="Telefono"
       class="form-control mb-2"
     />
-    <input
+    <label for="" style="color:#000000;">Correo electronico:</label>
+    <input 
       type="text"
       required="email"
       name="Email"
-      placeholder="Email"
       class="form-control mb-2"
     />
+    <label for="" style="color:#000000;">CURP:</label>
     <input
       type="text"
       required="texto"
       name="CURP"
-      placeholder="CURP"
       class="form-control mb-2"
     />
 
- <label for="centroTrabajo">Centro de Trabajo (Para seleccionar varios, mantenga pulsado 'Ctrl')</label>
+ <label style="color:#000000;" for="centroTrabajo">Centro de Trabajo (Para seleccionar varios, mantenga pulsado 'Ctrl')</label>
     <div class="form-group mb-2">
      <select class="form-control" id="centroTrabajo" name="CentroTrabajoID">
        @foreach ($centrosTrabajo as $centroTrabajo)
         <option value='{{$centroTrabajo->id}}'>{{$centroTrabajo->Nombre}}</option>
        @endforeach
-
-
      </select>
      </div>
-
+     <label for="" style="color:#000000;">Tipo de plaza:</label>
     <input
       type="text"
       required="text"
       name="TipoPlaza"
-      placeholder="Tipo de plaza"
       class="form-control mb-2"
     />
+    <label for="" style="color:#000000;">Fecha de ingreso:</label>
     <input
       type="date"
       required="date"
       name="FechaIngreso"
-      placeholder="Fecha de Ingreso"
       class="form-control mb-2"
     />
+    <label for="" style="color:#000000;">RFC:</label>
     <input
       type="text"
       required="text"
       name="RFC"
-      placeholder="RFC"
       class="form-control mb-2"
     />
     <div class="form-group mb-2">
-     <label for="estado">Estado</label>
+    <label for="" style="color:#000000;">Estado de actividad:</label>
      <select class="form-control" id="estado" name="Estado">
        @foreach ($estados as $estado)
-       <option>{{$estado->Estado}}</option>
+       <option value="{{$estado->id}}">{{$estado->Estado}}</option>
        @endforeach
      </select>
    </div>

@@ -3,7 +3,7 @@
 <form method="POST" action="{{ route('coordinacion.update', $coordinacion->id) }}" class="text-light">
   @method('PUT')
   @csrf
-
+  <label style="color:#000000;" for='Nom'>Nombre:</label>
   <input
     type="text"
     required="text"
@@ -12,7 +12,7 @@
     class="form-control mb-2"
     value = "{{$coordinacion->Nombre}}"
   />
-
+  <label style="color:#000000;" for='Nom'>Teléfono:</label>
   <input
     type="text"
     required="text"
